@@ -1,0 +1,15 @@
+.Side-bar
+  .Side-bar__user-name
+    .Side-bar__user-name__top
+      %p.Side-bar__user-name__top__name name
+      %ul.Side-bar__user-name__top__icons
+        = link_to "#", class: "Contents__btn" do
+          = icon('far', 'edit')
+        = link_to "#", class: "Contents__btn" do
+          = icon('fas', 'cog')
+  .Side-bar__group-list
+    .Side-bar__group-list__messages
+      .Side-bar__group-list__messages__group グループ
+      .Side-bar__group-list__messages__text メッセージ
+
+

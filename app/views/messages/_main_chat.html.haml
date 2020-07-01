@@ -1,0 +1,23 @@
+.Chat-main
+  .Chat-main__group-info
+    .group
+      .name グループ
+      %ul.memberlist 
+        Member :
+        %li.member name
+    = link_to'#',class:"editButton" do
+      Edit
+  .Chat-main__message-list
+    .box
+      .MessageInfo
+        .name name 
+        .date 2020/01/01
+      .text おはよう
+  .Chat-main__message-form
+    %form.new_message
+      .input-box
+        %input{type: "text", class: "input-box__text",placeholder:"type a message"}
+        %label{class: "input-box__image"}
+          = icon('fas', 'image')
+          %input{type: "file", class: "input-box__image__file"}
+      %input{type: "submit",value: "Send" ,class:"submit__btn"}
