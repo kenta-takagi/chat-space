@@ -11,9 +11,7 @@
     = link_to edit_group_path(@group.id), class: "editButton" do
       Edit
   .Chat-main__message-list
-    .box
-      .MessageInfo
-        = render @messages
+    = render @messages
 
   .Chat-main__message-form
     = form_with model: [@group, @message], html: {class: "new_message"}, local: true do |f|
@@ -24,5 +22,3 @@
           = f.file_field :image, class: 'input-box__image__file'
       = f.submit 'Send', class: 'submit__btn'
 
-.MessageField
-  = render @messages
